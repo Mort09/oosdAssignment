@@ -10,18 +10,66 @@
     </head>
 
     <body>
-        <div class="register-main">
-            <h1> Registration Page Under Construction </h1>
-            <br>
-            <form method="POST" action="bouncer.php">
 
-            </form>
-        </div>
+        <!-- Begin Header -->
+        <header>
+            <h1> Start Your Experience Here! </h1>
+        </header>
+        <!-- End Header -->
+
+        <br>
+
+        <!-- Begin Main -->
+        <main>
+            <div class="register-main">
+                <form method="POST">
+
+                    <div class="form-group">
+                        <label for="clientName"> <strong>Full Name</strong>: </label>
+                        <input type="text" name="fullName" id="clientName" placeholder="Full Name">
+                        <label for="clientEmail"> <strong>Email</strong>: </label>
+                        <input type="email" name="email" id="clientEmail" placeholder="name@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                    
+                        <h3>Choose up to three (3) Canadian destinations</h3>
+                    
+                        <!-- <h4>Cities</h4> -->
+                        
+                        <input type="checkbox" name="calgary" id="calgary" value="calgary"> <label for="calgary"><strong>Calgary</strong></label>
+                        <input type="checkbox" name="javascript" id="toronto" value="toronto"><label for="toronto"><strong>Toronto</strong></label>
+                        <input type="checkbox" name="vancouver" id="vancouver" value="vancouver"> <label for="vancouver"><strong>Vancouver</strong></label>
+                        <input type="checkbox" name="winnipeg" id="winnipeg" value="winnipeg"> <label for="winnipeg"><strong>Winnipeg</strong></label>
+                        <input type="checkbox" name="edmonton" id="edmonton" value="edmonton"> <label for="edmonton"><strong>Edmonton</strong></label>
+                        <input type="checkbox" name="saskatoon" id="saskatoon" value="saskatoon"> <label for="saskatoon"><strong>Saskatoon</strong></label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message"><strong>Additional Message</strong>: </label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                    
+                    <div class="register-btn">
+                        <!-- remove this for margin in CSS assignment -->
+                        <br> 
+                        <input type="submit" value="REGISTER" class="button">
+                        <input type="reset" value="RESET" class="button">
+                    <!-- <button>Send</button> -->
+                    </div>
+                </form>
+            </div>
+        </main>
+        <!-- End Main -->
+
+        <!-- Begin Footer -->
         <footer>
             <div class="footer">
                 <p> kabal tech &copy; 2019</p>
             </div>
         </footer>
+        <!-- End Footer -->
+
     </body>
 
 </html>
