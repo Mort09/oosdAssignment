@@ -1,5 +1,209 @@
-// Assignment 6, Table Image Gallery
+// Assingment 7, Focus and Form Validation
 
+let regForm = document.registerForm;
+let fullName = regForm.fullName;
+let address1 = regForm.address1;
+let address2 = regForm.address2;
+let city = regForm.city;
+let province = regForm.province;
+let postCode = regForm.postCode;
+
+let submitBtn = regForm.regBtn;
+
+let regEx = new RegExp('/^[A-Z]\d[A-Z] ?\d[A-Z]\d$/');
+
+let inputErr = document.getElementsByClassName('validate');
+let inputEls = document.getElementsByClassName('focus');
+
+// console.log(inputErr);
+// console.log(inputEls);
+
+let arraySubs = Array.from(inputErr);
+let arrayInputs = Array.from(inputEls);
+
+// console.log(arrayErrs);
+// console.log(arrayInputs);
+
+
+arraySubs.forEach((arraySub) => {
+    
+    // arrayErr.addEventListener('submit', (e) => {
+
+    // })
+
+    // console.log(arraySub.nextElementSibling.nextElementSibling);
+
+    submitBtn.addEventListener('click', (e) => {
+        let nonDisp = arraySub.nextElementSibling.nextElementSibling;
+        nonDisp.className = 'validation';
+
+        let subVal = arraySub.value;
+        let postVal = postCode.value;
+
+        if (!subVal){
+            e.preventDefault();
+            nonDisp.className = 'validation-error';
+        }
+
+        if ((subVal === postVal) && (regEx.test(subVal))) {
+            e.preventDefault();
+            nonDisp.className = 'validation-error';
+        }
+    })
+})
+
+arrayInputs.forEach((arrInp) => {
+
+    // console.log(arrInp.nextElementSibling);
+
+    arrInp.addEventListener('focus', (e) => {
+        let current = e.currentTarget;
+
+        let focusMsg = current.nextElementSibling;
+
+        focusMsg.className = 'focus-display';
+
+    });
+
+    arrInp.addEventListener('blur', (e) => {
+        let current = e.currentTarget;
+    
+        let removeMsg = current.nextElementSibling;
+    
+        removeMsg.className = 'focus-feedback';
+    });
+})
+
+/* Retired, too Repeatitive, Above is drier. */
+
+// fullName.addEventListener('focus', (e) => {
+//     let current = e.currentTarget;
+
+//     // console.log(current.nextElementSibling);
+
+//     let focusMsg = current.nextElementSibling;
+
+//     focusMsg.className='focus-display';
+
+// })
+
+// fullName.addEventListener('blur', (e) => {
+//     let current = e.currentTarget;
+
+//     let removeMsg = current.nextElementSibling;
+
+//     removeMsg.className = 'focus-feedback';
+// })
+
+// address1.addEventListener('focus', (e) => {
+//     let current = e.currentTarget;
+
+//     // console.log(current.nextElementSibling);
+
+//     let focusMsg = current.nextElementSibling;
+
+//     focusMsg.className='focus-display';
+
+// })
+
+// address1.addEventListener('blur', (e) => {
+//     let current = e.currentTarget;
+
+//     let removeMsg = current.nextElementSibling;
+
+//     removeMsg.className = 'focus-feedback';
+// })
+
+// address2.addEventListener('focus', (e) => {
+//     let current = e.currentTarget;
+
+//     // console.log(current.nextElementSibling);
+
+//     let focusMsg = current.nextElementSibling;
+
+//     focusMsg.className='focus-display';
+
+// })
+
+// address2.addEventListener('blur', (e) => {
+//     let current = e.currentTarget;
+
+//     let removeMsg = current.nextElementSibling;
+
+//     removeMsg.className = 'focus-feedback';
+// })
+
+// city.addEventListener('focus', (e) => {
+//     let current = e.currentTarget;
+
+//     // console.log(current.nextElementSibling);
+
+//     let focusMsg = current.nextElementSibling;
+
+//     focusMsg.className='focus-display';
+
+// })
+
+// city.addEventListener('blur', (e) => {
+//     let current = e.currentTarget;
+
+//     let removeMsg = current.nextElementSibling;
+
+//     removeMsg.className = 'focus-feedback';
+// })
+
+// province.addEventListener('focus', (e) => {
+//     let current = e.currentTarget;
+
+//     // console.log(current.nextElementSibling);
+
+//     let focusMsg = current.nextElementSibling;
+
+//     focusMsg.className='focus-display';
+
+// })
+
+// province.addEventListener('blur', (e) => {
+//     let current = e.currentTarget;
+
+//     let removeMsg = current.nextElementSibling;
+
+//     removeMsg.className = 'focus-feedback';
+// })
+
+// postCode.addEventListener('focus', (e) => {
+//     let current = e.currentTarget;
+
+//     // console.log(current.nextElementSibling);
+
+//     let focusMsg = current.nextElementSibling;
+
+//     focusMsg.className='focus-display';
+
+// })
+
+// postCode.addEventListener('blur', (e) => {
+//     let current = e.currentTarget;
+
+//     let removeMsg = current.nextElementSibling;
+
+//     removeMsg.className = 'focus-feedback';
+// })
+
+// console.log(fullName);
+// console.log(address1);
+// console.log(address2);
+// console.log(city);
+// console.log(province);
+// console.log(postCode)
+
+// console.log(regForm);
+
+
+
+
+
+// Assignment 6, Table Image Gallery
 let tableCont = document.getElementById('table-container');
 
 let images =  [
@@ -88,9 +292,8 @@ tableCont.appendChild(table);
 // console.log(tableCont);
 
 // Assignment 5, Dialog/Modal Pop
-
-let regForm = document.registerForm;
-let submitBtn = regForm.regBtn;
+// let regForm = document.registerForm; moved to the top
+// let submitBtn = regForm.regBtn; moved to the top
 let resetBtn = submitBtn.nextElementSibling;
 
 submitBtn.addEventListener('click', (e) => {

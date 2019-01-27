@@ -112,6 +112,26 @@ footer {
     margin-top: 20px;
 }
 
+.focus-feedback {
+    display: none;
+}
+
+.focus-display {
+    color: #EDAE49;
+    font-size: 13px;
+    display: block;
+}
+
+.validation {
+    display: none;
+}
+
+.validation-error {
+    color: red;
+    display: block;
+    font-size: 13px;
+}
+
 /* .message-additional {
 
 } */
