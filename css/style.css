@@ -52,10 +52,10 @@ footer {
     font-family: 'Aclonica', sans-serif;
 }
 
-.landing-carousel{
+/* .landing-carousel{ */
     /* text-align: center; */
     /* height: 100px;  */
-}
+/* } */
 
 .carousel-inner > .item > img {
     width:1200px;
@@ -112,9 +112,9 @@ footer {
     margin-top: 20px;
 }
 
-.message-additional {
+/* .message-additional {
 
-}
+} */
 
                     /* Media Queries */
 
