@@ -21,50 +21,18 @@ main {
     min-height: 700px;
 }
 
-label {
-    font-family: 'Aclonica', sans-serif;
-}
-
-footer {
-    background: #D5DFEC;
-    padding: 30px;
-    box-shadow: 0 -6px 8px -4px rgba(0,0,0,0.6);;
-}
-
-.landing-greetings {
+.landing-greetings, .contact-greetings {
     /* font-family: 'Marck Script', cursive; */
     font-family: 'Aclonica', sans-serif;
     text-align: center;
     font-size: 45px;
 }
-
-.contact-greetings, .register-greetings {
-    font-family: 'Aclonica', sans-serif;
-    /* text-align: center; */
-    font-size: 45px;
-}
-
-.cities {
-    margin-top: 20px;
-}
-
-.destinations {
-    font-family: 'Aclonica', sans-serif;
-}
-
 .landing-carousel{
-    /* text-align: center; */
-    /* height: 100px;  */
+    text-align: center;
 }
 
-.carousel-inner > .item > img {
-    width:1200px;
-    height:500px;
-}
-
-.comp-contacts > ul, .register-heading, .btn, input[placeholder], .footer {
+.comp-contacts > ul {
     list-style: none;
-    font-family: 'Metrophobic', sans-serif;
 }
 .agent-contacts{
     font-family: 'Aclonica', sans-serif;
@@ -73,99 +41,81 @@ footer {
     margin-top: 20px;
 }
 
-.agent-box, .register-box {
+.agent-box {
     margin: 40px;
     background: #fff;
     border: #D9E5D6 solid 1px;
     border-radius: 10px;
     padding: 30px;
-    min-height: 800px;
+    min-height: 700px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .agent > .card{
     margin-top: 40px;
     border: #F3EAC5 solid 1px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.02), 0 10px 10px rgba(0, 0, 0, 0.06);
-
-}
-
-.agent > .card:hover {
-
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    transition: all 0.8s ease-in-out;
 
 }
 
 .card-title {
-
     font-family: 'Berkshire Swash', cursive;
-
 }
 
-.list-group-item, .description {
+.list-group-item {
     font-family: 'Metrophobic', sans-serif;
-}
-
-.description {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.message-additional {
-
 }
 
                     /* Media Queries */
 
 /* Desktops */
-/* @media (min-width: 1281px) { */
-    /* .comp-contacts { */
-        /* margin: 15px 250px 15px 250px; */
-        /* border: #D9E5D6 solid 1px; */
-        /* border-radius: 7px; */
-        /* padding: 20px; */
-        /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.02), 0 10px 10px rgba(0, 0, 0, 0.06); */
-    /* } */
-    /* .comp-contacts:hover {
+@media (min-width: 1281px) {
+    .comp-contacts {
+        margin: 15px 250px 15px 250px;
+        border: #D9E5D6 solid 1px;
+        border-radius: 7px;
+        padding: 20px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.02), 0 10px 10px rgba(0, 0, 0, 0.06);
+    }
+    .comp-contacts:hover {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        /* transition: cubic-bezier(0.47, 0, 0.745, 0.715); */
         transition: all 0.5s ease-in-out;
-    } */
-/* } */
+    }
+}
 
 /* Laptops to Desktops */
-/* @media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
     .comp-contacts {
         margin: 15px 250px 15px 250px;
         border: #D9E5D6 solid 1px;
         border-radius: 7px;
         padding: 20px;
     }
-} */
+}
 
 /* Tablets */
-/* @media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .comp-contacts {
-        text-align: center;
+        /* text-align: center; */
         margin: 15px 150px 15px 150px;
         border: #D9E5D6 solid 1px;
         border-radius: 7px;
         padding: 20px; 
     }
-} */
+}
 
-/* @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .comp-contacts {
-        text-align: center;
+        /* text-align: center; */
         margin: 10px 0 20px 0;
         border: #D9E5D6 solid 1px;
         border-radius: 7px;
         padding: 10px; 
     }
-} */
+}
 
 /* Phones */
-/* @media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 767px) {
     .comp-contacts {
         text-align: center;
         margin: 10px 0 20px 0;
@@ -173,14 +123,14 @@ footer {
         border-radius: 7px;
         padding: 0; 
     }
-} */
+}
 
-/* @media (min-width: 320px) and (max-width: 480px) { 
+@media (min-width: 320px) and (max-width: 480px) { 
     .comp-contacts {
-        text-align: center;
+        /* text-align: center; */
         margin: 10px 0 20px 0;
         border: #D9E5D6 solid 1px;
         border-radius: 7px;
         padding: 10px; 
     }
-} */
+}
