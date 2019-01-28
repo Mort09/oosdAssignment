@@ -24,6 +24,9 @@ main {
 label {
     font-family: 'Aclonica', sans-serif;
 }
+nav {
+    margin: 0;
+}
 
 footer {
     background: #D5DFEC;
@@ -62,7 +65,7 @@ footer {
     height:500px;
 }
 
-.comp-contacts > ul, .register-heading, .btn, input[placeholder], .footer {
+.comp-contacts > ul, .register-heading, .btn, input[placeholder], .footer, p {
     list-style: none;
     font-family: 'Metrophobic', sans-serif;
 }
@@ -74,7 +77,7 @@ footer {
 }
 
 .agent-box, .register-box {
-    margin: 40px;
+    margin-bottom: 40px;
     background: #fff;
     border: #D9E5D6 solid 1px;
     border-radius: 10px;
@@ -131,6 +134,62 @@ footer {
     display: block;
     font-size: 13px;
 }
+
+.nav-hidden {
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.nav-item {
+    margin-left: 15px;
+}
+
+.nav-item:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    color: white;
+    /* background: #5D605F; */
+}
+
+/* .container-header {
+    position: relative;
+    padding: 0;
+} */
+
+.jumbotron-register {
+    background-image: url('https://images.pexels.com/photos/1712326/pexels-photo-1712326.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-size: cover;
+    color: white;
+    /* position: relative; */
+
+}
+
+.jumbotron-contact {
+    background-image: url('https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    color: white;
+}
+
+.jumbotron-gallery {
+    background-image: url('https://images.pexels.com/photos/20967/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    color: white;
+}
+
+.jumbotron-landing {
+    background-image: url('https://images.pexels.com/photos/372098/pexels-photo-372098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=700&w=1260');
+    min-height: 680px;
+    color: white;
+    background-size: cover;
+}
+
+.index-greeting{
+    font-family: 'Righteous', cursive;
+}
+
+
+/* .navbar-brand {
+    opacity: 1;
+} */
 
 /* .message-additional {
 
