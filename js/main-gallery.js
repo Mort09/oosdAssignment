@@ -1,4 +1,4 @@
-// Assignment 6, Table Image Gallery
+// Assignment 6 and 8, Table Image Gallery
 let tableCont = document.getElementById('table-container');
 
 let images =  [
@@ -15,6 +15,14 @@ let descriptions = [
     'Edmonton: The seat of politics',
     'Vancouver: Where the sun shines',
     'Saskatoon'
+]
+
+let urls = [
+    "http://www.calgary.ca/SitePages/cocis/default.aspx",
+    "http://www.calgary.ca/SitePages/cocis/default.aspx",
+    "https://www.edmonton.ca/",
+    "https://vancouver.ca/",
+    "https://www.saskatoon.ca/"
 ]
 
 let table = document.createElement('table')
@@ -57,16 +65,35 @@ for (let i=0; i < images.length; i++) {
     
     let td1 = document.createElement('td');
 
+    let a1 = document.createElement('a')
+
     let img = document.createElement('img');
+
+    a1.href = urls[i];
 
     img.src = images[i];
     img.width = "500";
     img.heigh ="450";
     img.alt = descriptions[i];
-    td1.appendChild(img);
+    a1.appendChild(img);
+
+    td1.appendChild(a1);
 
     td1.addEventListener('mouseover', () => {
         par.style.display = 'inline';
+    })
+
+    td1.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        let currentImg = e.currentTarget;
+        let curLink = currentImg.firstElementChild;
+
+        openLink(curLink);
+
+        setTimeout(closeWin(curLink), 50000);
+        
+        // console.log(curLink);
     })
 
     tr.appendChild(td1);
@@ -85,3 +112,13 @@ for (let i=0; i < images.length; i++) {
 tableCont.appendChild(table);
 
 // console.log(tableCont);
+
+function openLink(link){
+    let customWin = window;
+    customWin.open(link);
+    // setTimeout(customWin.close(link), 5000);
+}
+
+function closeWin(link){
+    window.close(link);
+}

@@ -28,10 +28,6 @@ let arrayInputs = Array.from(inputEls);
 
 arraySubs.forEach((arraySub) => {
     
-    // arrayErr.addEventListener('submit', (e) => {
-
-    // })
-
     // console.log(arraySub.nextElementSibling.nextElementSibling);
 
     submitBtn.addEventListener('click', (e) => {
@@ -50,8 +46,46 @@ arraySubs.forEach((arraySub) => {
             e.preventDefault();
             nonDisp.className = 'validation-error';
         }
-    })
-})
+
+        if ((subVal || (subVal === postVal)) && (regEx.test(subVal) == true)){
+            subValidated();
+            regForm.reset();
+        }
+
+    });
+
+});
+
+
+function subValidated(){
+    let confirmSub = confirm('Are you sure you want to proceed?')
+
+    if (confirmSub === true) {
+        // e.prevenDefault()
+        regForm.submit();
+        
+    } else {
+        console.log(confirmSub);
+        return false;
+    }    
+}
+
+// Prevents validation from working, will need a little extra codes to pass them
+// into each other
+
+// submitBtn.addEventListener('click', (e) => {
+
+//     let confirmSub = confirm('Are you sure you want to proceed?')
+
+//     if (confirmSub === true) {
+//         // e.prevenDefault()
+//         regForm.submit();
+        
+//     } else {
+//         console.log(confirmSub);
+//         return false;
+//     }
+// })
 
 arrayInputs.forEach((arrInp) => {
 
@@ -75,7 +109,7 @@ arrayInputs.forEach((arrInp) => {
     });
 })
 
-/* Retired, too Repeatitive, Above is drier. */
+/* Retired, too Repetitive, Above is drier. */
 
 // fullName.addEventListener('focus', (e) => {
 //     let current = e.currentTarget;
@@ -206,18 +240,18 @@ arrayInputs.forEach((arrInp) => {
 // let submitBtn = regForm.regBtn; moved to the top
 // let resetBtn = submitBtn.nextElementSibling; moved to the top
 
-submitBtn.addEventListener('click', (e) => {
+// submitBtn.addEventListener('click', (e) => {
 
-    let confirmSub = confirm('Are you sure you want to proceed?')
+//     let confirmSub = confirm('Are you sure you want to proceed?')
 
-    if (confirmSub === true) {
-        // e.prevenDefault()
-        regForm.submit();
-    } else {
-        console.log(confirmSub);
-        return false;
-    }
-})
+//     if (confirmSub === true) {
+//         // e.prevenDefault()
+//         regForm.submit();
+//     } else {
+//         console.log(confirmSub);
+//         return false;
+//     }
+// })
 
 resetBtn.addEventListener('click', (e) => {
 
@@ -227,8 +261,8 @@ resetBtn.addEventListener('click', (e) => {
         // e.preventDefault()
         regForm.reset();
     } else {
-        console.log(confirmRes);
+        // console.log(confirmRes);
         return false;
     }
-    
+
 })
