@@ -42,6 +42,9 @@
                                     <!-- <img src="img/add-contacts.png" alt="register" title="Register" width="40" height="40"> -->
                                     <a class="nav-link" href="register.php"><span class="d-md-block"><i class="fas fa-user-plus fa-2x" title="Register"></i></span><span class="d-md-none nav-hidden">Register</span></a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="links.php"><i class="fas fa-link fa-2x" title="links"></i></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
