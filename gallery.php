@@ -23,26 +23,26 @@
                 <!-- Begin Bootstrap Nav -->
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container">
-                        <a class="navbar-brand" href="index.html"><img src="img/logo3.png" alt="logo" width="50" height="50"></a>
+                        <a class="navbar-brand" href="index.php"><img src="img/logo3.png" alt="logo" width="50" height="50"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                             <ul class="navbar-nav" id="navbar-cont">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.html"><i class="fas fa-home fa-2x" title="home" alt="home"></i> <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="index.php"><i class="fas fa-home fa-2x" title="home" alt="home"></i> <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <!-- <img src="img/add-contacts.png" alt="register" title="Register" width="40" height="40"> -->
-                                    <a class="nav-link" href="gallery.html"><i class="far fa-images fa-2x" title="Gallery"></i></a>
+                                    <a class="nav-link" href="gallery.php"><i class="far fa-images fa-2x" title="Gallery"></i></a>
                                 </li>
                                 <li class="nav-item">
                                     <!-- <img src="img/contact.png" alt="contact" title="Contact" width="40" height="40"> -->
-                                    <a class="nav-link" href="contact.html"><i class="fas fa-mail-bulk fa-2x" title="Contact"></i></a>
+                                    <a class="nav-link" href="contact.php"><i class="fas fa-mail-bulk fa-2x" title="Contact"></i></a>
                                 </li>
                                 <li class="nav-item">
                                     <!-- <img src="img/add-contacts.png" alt="register" title="Register" width="40" height="40"> -->
-                                    <a class="nav-link" href="register.html"><i class="fas fa-user-plus fa-2x" title="Register"></i></a>
+                                    <a class="nav-link" href="register.php"><i class="fas fa-user-plus fa-2x" title="Register"></i></a>
                                 </li>
                             </ul>
                         </div>
