@@ -17,13 +17,13 @@ let inputErr = document.getElementsByClassName('validate');
 let inputEls = document.getElementsByClassName('focus');
 
 // console.log(inputErr);
-// console.log(inputEls);
 
 let arraySubs = Array.from(inputErr);
 let arrayInputs = Array.from(inputEls);
 
-// console.log(arrayErrs);
 // console.log(arrayInputs);
+
+// console.log(arrayErrs);
 
 
 arraySubs.forEach((arraySub) => {
@@ -90,6 +90,8 @@ function subValidated(){
 arrayInputs.forEach((arrInp) => {
 
     // console.log(arrInp.nextElementSibling);
+
+    // console.log(arrInp);
 
     arrInp.addEventListener('focus', (e) => {
         let current = e.currentTarget;

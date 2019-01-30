@@ -17,36 +17,9 @@
         <header class="container-header">
 
                 <!-- Begin Bootstrap Nav -->
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container">
-                        <a class="navbar-brand" href="index.php"><img src="img/logo3.png" alt="logo" width="50" height="50"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                            <ul class="navbar-nav" id="navbar-cont">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.php"><i class="fas fa-home fa-2x" title="home" alt="home"></i> <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <!-- <img src="img/add-contacts.png" alt="register" title="Register" width="40" height="40"> -->
-                                    <a class="nav-link" href="gallery.php"><i class="far fa-images fa-2x" title="Gallery"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <!-- <img src="img/contact.png" alt="contact" title="Contact" width="40" height="40"> -->
-                                    <a class="nav-link" href="contact.php"><i class="fas fa-mail-bulk fa-2x" title="Contact"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <!-- <img src="img/add-contacts.png" alt="register" title="Register" width="40" height="40"> -->
-                                    <a class="nav-link" href="register.php"><i class="fas fa-user-plus fa-2x" title="Register"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="link.php"><i class="fas fa-link fa-2x" title="links"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                    <?php
+                        include('php/nav.php');
+                    ?>
                 <!-- End Bootstrap Nav -->
                 
             </div>
@@ -81,26 +54,26 @@
 
                                 $row_no = 0;
 
-                                $row_links = [
+                                $row_links = array(
                                     'page1.php', 'page2.php', 'page3.php',
                                     'page4.php', 'page5.php', 'page6.php'
-                                ];
+                                );
 
-                                $page_name = [
+                                $page_name = array(
                                     'page1', 'page2', 'page3',
                                     'page4', 'page5', 'page6'
-                                ];
+                                );
 
                                 echo $tableOpen;
                                     echo "<tr> <th>Serial no.</th> <th>Links</th> </tr>";
 
                                     for ($i = 0; $i < $rows; $i++) {
                                         
-                                        $row_no += 1;
+                                        $row_no ++;
 
                                         echo "<tr>";
                                         
-                                         echo "<td> $row_no </td> <td> <a href='$row_links[$i]'> $page_name[$i] </a></td>";
+                                         echo "<td> $row_no </td> <td> <a href='$row_links[$i]' target='_blank'> $page_name[$i] </a></td>";
                                         
                                          // for($j = 1; $j <= $cols; $j++) {
                                         //     // $k = $i * $j;
@@ -121,11 +94,9 @@
         <!-- End Main -->
 
         <!-- Begin Footer -->
-        <footer>
-            <div class="footer">
-                <p> kabal tech &copy; 2019</p>
-            </div>
-        </footer>
+            <?php
+                include('php/footer.php');
+            ?>
         <!-- End Footer -->
 
         <!-- Begin JavaScript -->
