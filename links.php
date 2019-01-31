@@ -85,6 +85,33 @@
                                         echo "</tr> \n <br>";
                                     }
                                 echo $tableClose;
+
+                                print("<br>");
+                                
+
+                                $assoc_links = array(
+                                    "http://www.calgary.ca/SitePages/cocis/default.aspx" => "See calgary",
+                                    "http://www.calgary.ca/SitePages/cocis/default.aspx" => "See calgary",
+                                    "https://www.edmonton.ca/" => "See Edmonton",
+                                    "https://vancouver.ca/" => "See Vancouver",
+                                    "https://www.saskatoon.ca/" => "See Saskatoon",
+                                );
+    
+                                print($tableOpen);
+                                    $row = 1;
+                                    print "<tr> <th>Serial no.</th> <th>Links</th> </tr>";
+                                    foreach ($assoc_links as $url => $label) {
+
+                                        print "<tr>";
+                                        
+                                        print "<td> $row</td> <td> <a href='$url' target='_blank'> $label </a></td>";
+                                
+
+                                        print "</tr> \n <br>";
+
+                                        $row ++;
+                                    }
+                                print ($tableClose);
                             ?>
                         </div>
                     </div>
