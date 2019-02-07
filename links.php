@@ -1,3 +1,11 @@
+<?php 
+/***************************************
+* Author: Ibraheem Kolawole
+* Date: February 11, 2019
+* Purpose: Looping through associative arrays and appending to table
+* Requires: variables.php page 
+****************************************/
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,7 +26,7 @@
 
                 <!-- Begin Bootstrap Nav -->
                     <?php
-                        include('php/nav.php');
+                        include('php/includes/nav.php');
                     ?>
                 <!-- End Bootstrap Nav -->
                 
@@ -56,12 +64,12 @@
 
                                 $row_links = array(
                                     'page1.php', 'page2.php', 'page3.php',
-                                    'page4.php', 'page5.php', 'page6.php'
+                                    'page4.php', 'page5.php', 'page6.php',
                                 );
 
                                 $page_name = array(
                                     'page1', 'page2', 'page3',
-                                    'page4', 'page5', 'page6'
+                                    'page4', 'page5', 'page6',
                                 );
 
                                 echo $tableOpen;
@@ -73,14 +81,7 @@
 
                                         echo "<tr>";
                                         
-                                         echo "<td> $row_no </td> <td> <a href='$row_links[$i]' target='_blank'> $page_name[$i] </a></td>";
-                                        
-                                         // for($j = 1; $j <= $cols; $j++) {
-                                        //     // $k = $i * $j;
-                                            
-                                        //     echo "<td> $k $row_links[$i] </td>";                                       
-
-                                        // }
+                                        echo "<td> $row_no </td> <td> <a href='$row_links[$i]' target='_blank'> $page_name[$i] </a></td>";
 
                                         echo "</tr> \n <br>";
                                     }
@@ -88,14 +89,7 @@
 
                                 print("<br>");
                                 
-
-                                $assoc_links = array(
-                                    "http://www.calgary.ca/SitePages/cocis/default.aspx" => "See calgary",
-                                    "http://www.calgary.ca/SitePages/cocis/default.aspx" => "See calgary",
-                                    "https://www.edmonton.ca/" => "See Edmonton",
-                                    "https://vancouver.ca/" => "See Vancouver",
-                                    "https://www.saskatoon.ca/" => "See Saskatoon",
-                                );
+                                include('php/includes/variables.php');
     
                                 print($tableOpen);
                                     $row = 1;
@@ -106,7 +100,6 @@
                                         
                                         print "<td> $row</td> <td> <a href='$url' target='_blank'> $label </a></td>";
                                 
-
                                         print "</tr> \n <br>";
 
                                         $row ++;
@@ -122,7 +115,7 @@
 
         <!-- Begin Footer -->
             <?php
-                include('php/footer.php');
+                include('php/includes/footer.php');
             ?>
         <!-- End Footer -->
 

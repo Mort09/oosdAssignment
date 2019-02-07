@@ -23,7 +23,7 @@
             <!-- <div class="container"> -->
             <!-- Begin Bootstrap Nav -->
             <?php
-                include('php/nav.php');
+                include('php/includes/nav.php');
             ?>
             <!-- End Bootstrap Nav -->
 
@@ -63,44 +63,7 @@
             <!-- Start landing Jumbotron -->
             <div class="jumbotron jumbotron-fluid jumbotron-landing">
                 <div class="container">
-                    <?php
-                        date_default_timezone_set('America/Edmonton');
-                        $currTime = getdate(time());
-                        // print($currTime); // explode it
-                        $currentDateTime = date("h:i:sa");
-
-                        // if ($currentDateTime < 6){
-                        //     print("<div class='evening'>  Good evening</div>");
-                        // } elseif ($currentDateTime < 12) {
-                        //     print("<div class='afternoon'> Good afternoon</div>");
-                        // } else {
-                        //     print("<div class='morning'> Good morning</div>");
-                        // }
-
-                        if ($currTime['hours'] > 18) {
-                            // print("<div class='evening'> <h3> Good evening </h3> </div>");
-                            $class = 'evening';
-                            $greeting = 'Good evening';
-                        } elseif ($currTime['hours'] > 12) {
-                            // print("<div class='afternoon'> <h3> Good afternoon </h3></div>");
-                            $class = 'afternoon';
-                            $greeting = 'Good afternoon';
-                        } else {
-                            // print("<div class='morning'> <h3> Good morning </h3></div>");
-                            $class = 'morning';
-                            $greeting = 'Good morning';
-                        }
-
-                        print("<div class='$class'> <h3> $greeting </h3></div>");
-
-                        // print($currentDateTime["hours"]);
-                        print("<br>");
-                        // print('Good morning <br>');
-                        // print(date("h:i:sa"));
-                        // print("<br>");
-                        // print(strtotime("now"));
-                        // print(time("mst"));
-                    ?>
+                    <?php include('php/includes/time.php'); ?>
                     <h1 class="display-4 index-greeting">Ready to see world?</h1>
                     <p class="lead">Let's do it together...</p>
                 </div>
@@ -184,7 +147,7 @@
 
         <!-- Begin Footer -->
         <?php
-            include('php/footer.php');
+            include('php/includes/footer.php');
         ?>
         <!-- End Footer -->
 

@@ -22,7 +22,7 @@
 
                 <!-- Begin Bootstrap Nav -->
                 <?php
-                    include('php/nav.php');
+                    include('php/includes/nav.php');
                 ?>
                 <!-- End Bootstrap Nav -->
             </div>
@@ -173,6 +173,7 @@
                         // }
 
                         // $mysqli->close();
+                        
                         $host = "127.0.0.1:3306";
                         $db = "travelexperts";
                         $dsn= "mysql:host=$host;dbname=$db";
@@ -353,7 +354,7 @@
 
         <!-- Begin Footer -->
             <?php
-                include('php/footer.php');
+                include('php/includes/footer.php');
             ?>
         <!-- End Footer -->
 

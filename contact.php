@@ -20,7 +20,7 @@
 
                 <!-- Begin Bootstrap Nav -->
                     <?php
-                        include('php/nav.php');
+                        include('php/includes/nav.php');
                     ?>
                 <!-- End Bootstrap Nav -->
 
@@ -99,7 +99,7 @@
         </main>
 
         <?php
-            include('php/footer.php');
+            include('php/includes/footer.php');
         ?>
 
         <!-- Begin JavaScript -->
